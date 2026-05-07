@@ -1,0 +1,7 @@
+bench_name: convfinqa
+prompt_dir: data/convfinqa/question.jsonl
+answer_dir: data/convfinqa/model_answer
+judgment_dir: data/convfinqa/judgments
+
+
+

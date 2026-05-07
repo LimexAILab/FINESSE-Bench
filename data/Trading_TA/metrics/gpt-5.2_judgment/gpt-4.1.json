@@ -1,0 +1,22 @@
+{
+  "bench_name": "Trading_TA",
+  "model_name": "gpt-4.1",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 413,
+  "num_scored": 413,
+  "metrics": {
+    "accuracy": {
+      "value": 0.784503631961259,
+      "ci_lower": 0.7433414043583535,
+      "ci_upper": 0.8232445520581114,
+      "ci_level": 0.95,
+      "std_error": 0.020184481301383648
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:04:43.701276Z"
+}

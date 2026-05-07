@@ -1,0 +1,4 @@
+bench_name: cmt_like_level_2
+prompt_dir: data/cmt_like_level_2/question.jsonl
+answer_dir: data/cmt_like_level_2/model_answer
+judgment_dir: data/cmt_like_level_2/judgments

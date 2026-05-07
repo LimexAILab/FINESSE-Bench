@@ -1,0 +1,22 @@
+{
+  "bench_name": "cfa_level_1",
+  "model_name": "minimax-m2.1",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 1069,
+  "num_scored": 1069,
+  "metrics": {
+    "accuracy": {
+      "value": 0.8091674462114126,
+      "ci_lower": 0.784845650140318,
+      "ci_upper": 0.8325537885874649,
+      "ci_level": 0.95,
+      "std_error": 0.012034673308727518
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-05-04T09:15:21.895109Z"
+}

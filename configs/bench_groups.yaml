@@ -1,0 +1,16 @@
+exam_like:
+  - cfa_like_level_1
+  - cfa_like_level_2
+  - cfa_like_level_3
+  - cmt_like_level_2
+  - VLigaBench-ru
+
+public_benchs:
+  - finqa
+  - convfinqa
+  - tatqa
+
+ta_benchs:
+  - Trading_derivatives
+  - Trading_TA
+  - cfte_like_level_1

@@ -1,0 +1,22 @@
+{
+  "bench_name": "VLigaBench-ru",
+  "model_name": "qwen3.5-9b",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 324,
+  "num_scored": 324,
+  "metrics": {
+    "accuracy": {
+      "value": 0.7839506172839507,
+      "ci_lower": 0.7376543209876543,
+      "ci_upper": 0.8271604938271605,
+      "ci_level": 0.95,
+      "std_error": 0.022936962337882442
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:06:00.828555Z"
+}

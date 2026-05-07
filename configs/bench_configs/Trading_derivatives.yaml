@@ -1,0 +1,4 @@
+bench_name: Trading_derivatives
+prompt_dir: data/Trading_derivatives/question.jsonl
+answer_dir: data/Trading_derivatives/model_answer
+judgment_dir: data/Trading_derivatives/judgments

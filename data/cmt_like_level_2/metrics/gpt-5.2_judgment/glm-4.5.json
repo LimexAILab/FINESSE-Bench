@@ -1,0 +1,22 @@
+{
+  "bench_name": "cmt_like_level_2",
+  "model_name": "glm-4.5",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 251,
+  "num_scored": 251,
+  "metrics": {
+    "accuracy": {
+      "value": 0.8685258964143426,
+      "ci_lower": 0.8247011952191236,
+      "ci_upper": 0.9083665338645418,
+      "ci_level": 0.95,
+      "std_error": 0.021419251349525548
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:03:14.528919Z"
+}

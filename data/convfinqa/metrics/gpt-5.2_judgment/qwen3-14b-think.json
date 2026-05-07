@@ -1,0 +1,22 @@
+{
+  "bench_name": "convfinqa",
+  "model_name": "qwen3-14b-think",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 1488,
+  "num_scored": 1488,
+  "metrics": {
+    "accuracy": {
+      "value": 0.8655913978494624,
+      "ci_lower": 0.8481182795698925,
+      "ci_upper": 0.8823924731182796,
+      "ci_level": 0.95,
+      "std_error": 0.008829178872816281
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:08:15.331923Z"
+}

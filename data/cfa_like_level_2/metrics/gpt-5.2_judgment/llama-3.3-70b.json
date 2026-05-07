@@ -1,0 +1,22 @@
+{
+  "bench_name": "cfa_like_level_2",
+  "model_name": "llama-3.3-70b",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 293,
+  "num_scored": 293,
+  "metrics": {
+    "accuracy": {
+      "value": 0.6450511945392492,
+      "ci_lower": 0.590443686006826,
+      "ci_upper": 0.6996587030716723,
+      "ci_level": 0.95,
+      "std_error": 0.02796143273013255
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:01:44.556624Z"
+}

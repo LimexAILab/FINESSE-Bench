@@ -1,0 +1,22 @@
+{
+  "bench_name": "Trading_derivatives",
+  "model_name": "claude-3.7-sonnet",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 544,
+  "num_scored": 544,
+  "metrics": {
+    "accuracy": {
+      "value": 0.6213235294117647,
+      "ci_lower": 0.5808823529411765,
+      "ci_upper": 0.6617647058823529,
+      "ci_level": 0.95,
+      "std_error": 0.02078660609579949
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:04:13.093711Z"
+}
