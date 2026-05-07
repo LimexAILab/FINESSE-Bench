@@ -1,4 +1,0 @@
-bench_name: finqa
-prompt_dir: data/finqa/question.jsonl
-answer_dir: data/finqa/model_answer
-judgment_dir: data/finqa/judgments

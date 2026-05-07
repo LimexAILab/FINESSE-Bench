@@ -1,4 +1,0 @@
-bench_name: VLigaBench-ru
-prompt_dir: data/VLigaBench-ru/question.jsonl
-answer_dir: data/VLigaBench-ru/model_answer
-judgment_dir: data/VLigaBench-ru/judgments

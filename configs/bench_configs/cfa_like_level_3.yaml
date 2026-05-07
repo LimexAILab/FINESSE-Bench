@@ -1,4 +1,0 @@
-bench_name: cfa_like_level_3
-prompt_dir: data/cfa_like_level_3/question.jsonl
-answer_dir: data/cfa_like_level_3/model_answer
-judgment_dir: data/cfa_like_level_3/judgments
