@@ -1,0 +1,22 @@
+{
+  "bench_name": "cfte_like_level_1",
+  "model_name": "qwen3-32b-nothink",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 781,
+  "num_scored": 781,
+  "metrics": {
+    "accuracy": {
+      "value": 0.704225352112676,
+      "ci_lower": 0.6722151088348272,
+      "ci_upper": 0.736235595390525,
+      "ci_level": 0.95,
+      "std_error": 0.016308776027329018
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:05:12.920910Z"
+}

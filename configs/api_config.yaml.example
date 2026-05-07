@@ -1,0 +1,871 @@
+gpt-4.1_judgment:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai_struct_outputs_for_judge
+    model: gpt-4.1
+    temperature: 0.0
+    max_tokens: 32768
+    parallel: 64
+
+gpt-5.2_judgment:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai_struct_outputs_for_judge
+    model: openai/gpt-5.2
+    temperature: 0.0
+    max_tokens: 32768
+    parallel: 64
+
+######################################################################### openai
+gpt-4.1:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: openai/gpt-4.1
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+gpt-5:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: openai/gpt-5
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+gpt-5.2:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: openai/gpt-5.2
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+gpt-5.4:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: openai/gpt-5.4
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+#################################################################### LocalModels
+fin-o1-8b-think:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: TheFinAI/Fin-o1-8B
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 1
+    reasoning:
+        effort: "medium"
+        exclude: false
+    sys_prompt: 'You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer.'
+    prompt_suffix: "/think"
+
+
+fin-o1-8b-nothink:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: TheFinAI/Fin-o1-8B
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 1
+    reasoning:
+        effort: "low"
+        exclude: true
+    sys_prompt: 'You are a helpful AI assistant that provides only well-justified and detailed answers.\nDo not use internal monologue, chain-of-thought, or any kind of reasoning process in your response.\nDo not explain your answer or show your thought process.\nJust provide the final answer, with any necessary factual details, but without any reasoning steps.'
+    prompt_suffix: "/no_think"
+
+
+fin-r1-7b-think:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: SUFE-AIFLM-Lab/Fin-R1
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 1
+    reasoning:
+        effort: "medium"
+        exclude: false
+    sys_prompt: "You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer. Respond in the following format: <think>\n...\n</think>\n<answer>\n...\n</answer>"
+
+
+fin-r1-7b-nothink:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: SUFE-AIFLM-Lab/Fin-R1
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 1
+    reasoning:
+        effort: "medium"
+        exclude: false
+    sys_prompt: 'You are a helpful AI assistant that provides only well-justified and detailed answers.\nDo not use internal monologue, chain-of-thought, or any kind of reasoning process in your response.\nDo not explain your answer or show your thought process.\nJust provide the final answer, with any necessary factual details, but without any reasoning steps.'
+
+
+fino1-8b-think:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: TheFinAI/Fino1-8B
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 1
+    reasoning:
+        effort: "medium"
+        exclude: false
+    sys_prompt: "You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer. Respond in the following format: <think>\n...\n</think>\n<answer>\n...\n</answer>"
+
+
+fino1-8b-nothink:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: TheFinAI/Fino1-8B
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 1
+    reasoning:
+        effort: "medium"
+        exclude: false
+    sys_prompt: 'You are a helpful AI assistant that provides only well-justified and detailed answers.\nDo not use internal monologue, chain-of-thought, or any kind of reasoning process in your response.\nDo not explain your answer or show your thought process.\nJust provide the final answer, with any necessary factual details, but without any reasoning steps.'
+
+
+T-pro-it-2.0:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: t-tech/T-pro-it-2.0
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 70
+    repetition_penalty: 1.05
+    max_tokens: 25000
+    seed: 42
+    parallel: 2
+    reasoning:
+        effort: "medium"
+        exclude: false
+    sys_prompt: 'Ты T-pro, виртуальный ассистент в Т-Технологии. Твоя задача - быть полезным диалоговым ассистентом.'
+
+
+GigaChat3-702B-A36B-fp8:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: ai-sage/GigaChat3-702B-A36B-preview
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+
+
+GigaChat3-10B-A1.8B-bf16:
+    endpoints:
+        - api_base: http://localhost:8000/v1
+          api_key: ${LOCAL_API_KEY}
+    api_type: openai
+    model: ai-sage/GigaChat3-10B-A1.8B-bf16
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 128
+########################################################################### Qwen
+
+qwen3-8b-think:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3-8b
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    min_p: 0
+    max_tokens: 25000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "low"
+        exclude: false
+    sys_prompt: 'You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer.'
+    prompt_suffix: "/think"
+
+
+qwen3-8b-nothink:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3-8b
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "low"
+        exclude: true
+    sys_prompt: 'You are a helpful AI assistant that provides only well-justified and detailed answers.\nDo not use internal monologue, chain-of-thought, or any kind of reasoning process in your response.\nDo not explain your answer or show your thought process.\nJust provide the final answer, with any necessary factual details, but without any reasoning steps.'
+    prompt_suffix: "/no_think"
+
+
+qwen3-14b-think:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3-14b
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    min_p: 0
+    max_tokens: 25000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+    sys_prompt: 'You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer.'
+    prompt_suffix: "/think"
+
+
+qwen3-14b-nothink:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3-14b
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "low"
+        exclude: true
+    sys_prompt: 'You are a helpful AI assistant that provides only well-justified and detailed answers.\nDo not use internal monologue, chain-of-thought, or any kind of reasoning process in your response.\nDo not explain your answer or show your thought process.\nJust provide the final answer, with any necessary factual details, but without any reasoning steps.'
+    prompt_suffix: "/no_think"
+
+
+qwen3-32b-think:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3-32b
+    temperature: 0.6
+    top_p: 0.95
+    top_k: 20
+    min_p: 0
+    max_tokens: 25000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+    sys_prompt: 'You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer.'
+    prompt_suffix: "/think"
+
+
+qwen3-32b-nothink:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3-32b
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "low"
+        exclude: true
+    sys_prompt: 'You are a helpful AI assistant that provides only well-justified and detailed answers.\nDo not use internal monologue, chain-of-thought, or any kind of reasoning process in your response.\nDo not explain your answer or show your thought process.\nJust provide the final answer, with any necessary factual details, but without any reasoning steps.'
+    prompt_suffix: "/no_think"
+
+
+qwen3-235-nothink:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model:  qwen/qwen3-235b-a22b-07-25
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 25000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "low"
+        exclude: true
+    sys_prompt: 'You are a helpful AI assistant that provides only well-justified and detailed answers.\nDo not use internal monologue, chain-of-thought, or any kind of reasoning process in your response.\nDo not explain your answer or show your thought process.\nJust provide the final answer, with any necessary factual details, but without any reasoning steps.'
+
+
+qwen3-235-think:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3-235b-a22b-thinking-2507
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "low"
+        exclude: true
+    sys_prompt: 'You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer.'
+
+
+qwen3.5-9b:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3.5-9b
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+qwen3.5-27b:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3.5-27b
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+qwen3.5-35b-a3b:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3.5-35b-a3b
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+qwen3.5-122b-a10b:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3.5-122b-a10b
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+qwen3.5-397b-a17b:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3.5-397b-a17b
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+qwen3.5-flash-02-23:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3.5-flash-02-23
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+qwen3.5-plus-02-15:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: qwen/qwen3.5-plus-02-15
+    temperature: 0.7
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+    max_tokens: 30000
+    seed: 42
+    parallel: 4
+    reasoning:
+        effort: "medium"
+        exclude: false
+####################################################################### DeepSeek
+
+deepseek-r1-think:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: deepseek/deepseek-r1
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 128
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+deepseek-r1-0528-think:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: deepseek/deepseek-r1-0528
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+deepseek-chat-v3.1:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: deepseek/deepseek-chat-v3.1
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 128
+
+
+deepseek-v3.2:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: deepseek/deepseek-v3.2
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+
+##################################################################### Meta-LLama
+
+llama-4-maverick:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: meta-llama/llama-4-maverick
+    temperature: 0.6
+    seed: 42
+    parallel: 8
+    max_tokens: 25000
+
+
+llama-4-scout:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: meta-llama/llama-4-scout
+    temperature: 0.6
+    seed: 42
+    parallel: 8
+    max_tokens: 25000
+
+
+llama-3.3-70b:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: meta-llama/llama-3.3-70b-instruct
+    temperature: 0.6
+    seed: 42
+    parallel: 8
+    max_tokens: 25000
+
+
+llama-3.1-70b:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: meta-llama/llama-3.1-70b-instruct
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+
+
+######################################################################## Mistral
+mistral-small-3.2:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: mistralai/mistral-small-3.2-24b-instruct
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+
+########################################################################### z-ai
+glm-4.5:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: z-ai/glm-4.5
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+
+
+glm-4.6:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: z-ai/glm-4.6
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+
+
+glm-4.7:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: z-ai/glm-4.7
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+
+
+glm-4.5-air:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: z-ai/glm-4.5-air
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+
+
+glm-5:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: z-ai/glm-5
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+
+
+######################################################################### claude
+claude-3.7-sonnet:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: anthropic/claude-3.7-sonnet
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+
+
+claude-3.7-sonnet_thinking:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: anthropic/claude-3.7-sonnet:thinking
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+claude-4.5-sonnet:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: anthropic/claude-sonnet-4.5
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+claude-4.6-sonnet:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: anthropic/claude-sonnet-4.6
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+######################################################################## minimax
+minimax-m1:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: minimax/minimax-m1
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+minimax-m2.1:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: minimax/minimax-m2.1
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+minimax-m2.5:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: minimax/minimax-m2.5
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+######################################################################### xiaomi
+mimo-v2-flash:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: xiaomi/mimo-v2-flash
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+##################################################################### moonshotai
+kimi-k2.5:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: moonshotai/kimi-k2.5
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 8
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+######################################################################### google
+gemini-3.1-pro-preview:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: google/gemini-3.1-pro-preview
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+
+gemini-3.1-flash-lite-preview:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: google/gemini-3.1-flash-lite-preview
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+############################################################################ xAI
+grok-4-fast:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: x-ai/grok-4-fast
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false
+
+grok-4:
+    endpoints:
+        - api_base: https://openrouter.ai/api/v1
+          api_key: ${OPENROUTER_API_KEY}
+    api_type: openai
+    model: x-ai/grok-4
+    temperature: 0.6
+    max_tokens: 25000
+    seed: 42
+    parallel: 64
+    reasoning:
+        effort: "medium"
+        exclude: false

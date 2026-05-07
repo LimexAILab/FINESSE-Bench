@@ -1,0 +1,22 @@
+{
+  "bench_name": "finqa",
+  "model_name": "GigaChat3-702B-A36B-fp8",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 1147,
+  "num_scored": 1147,
+  "metrics": {
+    "accuracy": {
+      "value": 0.7585004359197908,
+      "ci_lower": 0.7332170880557978,
+      "ci_upper": 0.7829119442022667,
+      "ci_level": 0.95,
+      "std_error": 0.012606409641230451
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:07:35.342241Z"
+}

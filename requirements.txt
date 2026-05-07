@@ -1,0 +1,13 @@
+tiktoken
+torch
+transformers
+openai
+numpy
+pandas
+shortuuid
+tqdm
+gradio==5.25.2
+plotly
+scikit-learn
+vllm
+python-dotenv

@@ -1,0 +1,22 @@
+{
+  "bench_name": "VLigaBench-ru",
+  "model_name": "mistral-small-3.2",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 324,
+  "num_scored": 324,
+  "metrics": {
+    "accuracy": {
+      "value": 0.5216049382716049,
+      "ci_lower": 0.4660493827160494,
+      "ci_upper": 0.5740740740740741,
+      "ci_level": 0.95,
+      "std_error": 0.027631069201301185
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:06:16.024815Z"
+}

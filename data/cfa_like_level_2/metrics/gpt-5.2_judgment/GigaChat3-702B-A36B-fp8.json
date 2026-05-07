@@ -1,0 +1,22 @@
+{
+  "bench_name": "cfa_like_level_2",
+  "model_name": "GigaChat3-702B-A36B-fp8",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 293,
+  "num_scored": 293,
+  "metrics": {
+    "accuracy": {
+      "value": 0.5733788395904437,
+      "ci_lower": 0.515358361774744,
+      "ci_upper": 0.6279863481228669,
+      "ci_level": 0.95,
+      "std_error": 0.028901365858268406
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:01:55.303226Z"
+}

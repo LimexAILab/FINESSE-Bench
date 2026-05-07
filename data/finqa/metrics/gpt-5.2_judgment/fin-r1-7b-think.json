@@ -1,0 +1,22 @@
+{
+  "bench_name": "finqa",
+  "model_name": "fin-r1-7b-think",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 1147,
+  "num_scored": 1147,
+  "metrics": {
+    "accuracy": {
+      "value": 0.7741935483870968,
+      "ci_lower": 0.7497820401046208,
+      "ci_upper": 0.7986050566695728,
+      "ci_level": 0.95,
+      "std_error": 0.012385848560232256
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:06:36.073857Z"
+}

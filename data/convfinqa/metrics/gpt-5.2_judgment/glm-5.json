@@ -1,0 +1,22 @@
+{
+  "bench_name": "convfinqa",
+  "model_name": "glm-5",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 1488,
+  "num_scored": 1488,
+  "metrics": {
+    "accuracy": {
+      "value": 0.8897849462365591,
+      "ci_lower": 0.8736559139784946,
+      "ci_upper": 0.9059139784946236,
+      "ci_level": 0.95,
+      "std_error": 0.008128933191340074
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:09:08.763105Z"
+}

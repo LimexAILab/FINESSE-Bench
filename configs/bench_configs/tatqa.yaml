@@ -1,0 +1,4 @@
+bench_name: tatqa
+prompt_dir: data/tatqa/question.jsonl
+answer_dir: data/tatqa/model_answer
+judgment_dir: data/tatqa/judgments

@@ -1,0 +1,22 @@
+{
+  "bench_name": "cfa_like_level_2",
+  "model_name": "deepseek-r1-think",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 293,
+  "num_scored": 293,
+  "metrics": {
+    "accuracy": {
+      "value": 0.8498293515358362,
+      "ci_lower": 0.8088737201365188,
+      "ci_upper": 0.8907849829351536,
+      "ci_level": 0.95,
+      "std_error": 0.020890073472273646
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:01:46.217895Z"
+}

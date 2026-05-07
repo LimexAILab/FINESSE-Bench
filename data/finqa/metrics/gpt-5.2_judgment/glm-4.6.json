@@ -1,0 +1,22 @@
+{
+  "bench_name": "finqa",
+  "model_name": "glm-4.6",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 1147,
+  "num_scored": 1147,
+  "metrics": {
+    "accuracy": {
+      "value": 0.6774193548387096,
+      "ci_lower": 0.6503923278116827,
+      "ci_upper": 0.7044463818657367,
+      "ci_level": 0.95,
+      "std_error": 0.013799300149903236
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:07:44.066957Z"
+}

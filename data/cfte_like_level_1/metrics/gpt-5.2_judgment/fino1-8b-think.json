@@ -1,0 +1,22 @@
+{
+  "bench_name": "cfte_like_level_1",
+  "model_name": "fino1-8b-think",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 781,
+  "num_scored": 781,
+  "metrics": {
+    "accuracy": {
+      "value": 0.6133162612035852,
+      "ci_lower": 0.5787451984635084,
+      "ci_upper": 0.647887323943662,
+      "ci_level": 0.95,
+      "std_error": 0.017523213845368577
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:05:05.931642Z"
+}

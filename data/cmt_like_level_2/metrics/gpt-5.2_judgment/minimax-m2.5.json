@@ -1,0 +1,22 @@
+{
+  "bench_name": "cmt_like_level_2",
+  "model_name": "minimax-m2.5",
+  "judge_model": "gpt-5.2_judgment",
+  "num_questions": 251,
+  "num_scored": 251,
+  "metrics": {
+    "accuracy": {
+      "value": 0.8406374501992032,
+      "ci_lower": 0.7928286852589641,
+      "ci_upper": 0.8844621513944223,
+      "ci_level": 0.95,
+      "std_error": 0.023076725341900566
+    }
+  },
+  "bootstrap": {
+    "num_iterations": 100000,
+    "seed": 42,
+    "method": "percentile"
+  },
+  "timestamp": "2026-04-20T10:03:18.733978Z"
+}
