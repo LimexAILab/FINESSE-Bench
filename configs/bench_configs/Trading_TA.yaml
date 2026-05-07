@@ -1,4 +1,0 @@
-bench_name: Trading_TA
-prompt_dir: data/Trading_TA/question.jsonl
-answer_dir: data/Trading_TA/model_answer
-judgment_dir: data/Trading_TA/judgments

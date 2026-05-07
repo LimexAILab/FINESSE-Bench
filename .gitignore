@@ -1,8 +1,0 @@
-.env
-.env.local
-.env.*.local
-*.ipynb
-*.ipynb_checkpoints
-data/*/model_judgment
-data/*/model_answer
-__pycache__

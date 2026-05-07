@@ -1,4 +1,0 @@
-bench_name: cfte_like_level_1
-prompt_dir: data/cfte_like_level_1/question.jsonl
-answer_dir: data/cfte_like_level_1/model_answer
-judgment_dir: data/cfte_like_level_1/judgments
