@@ -580,4 +580,13 @@ A benchmark of applied problems on derivatives, options, and market microstructu
 
 ## Citation
 
-If you use FINESSE-Bench in your research, please cite this repository and any original benchmark sources where applicable.
+If you use FINESSE-Bench in your research, please cite:
+
+```bibtex
+@article{stanishevskii2026finessebench,
+  title={FINESSE-Bench: A Hierarchical Benchmark Suite for Financial Domain Knowledge and Technical Analysis in Large Language Models},
+  author={Dmitry Stanishevskii, Nini Kamkia, Alexey Khoroshilov, Dmitry Zmitrovich, Denis Kokosinskii, Zhirayr Hayrapetyan, Andrei Kalmykov},
+  year={2026},
+  url={https://github.com/LimexAILab/FINESSE-Bench}
+}
+```
